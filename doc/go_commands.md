@@ -1,4 +1,4 @@
 
 ## tidy
 
-- install dependencies / remove unused dependencies 
+- `go mod tidy` install dependencies / remove unused dependencies 
