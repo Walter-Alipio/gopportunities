@@ -1,4 +1,4 @@
-module github.com/Walter-Alipio/goportunities.git
+module github.com/Walter-Alipio/gopportunities.git
 
 go 1.27.0
 
