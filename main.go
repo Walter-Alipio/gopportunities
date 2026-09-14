@@ -1,8 +1,8 @@
 package main
 
 import (
-	config "github.com/Walter-Alipio/gopportunities.git/Config"
-	"github.com/Walter-Alipio/gopportunities.git/router"
+	config "github.com/Walter-Alipio/gopportunities/Config"
+	"github.com/Walter-Alipio/gopportunities/router"
 )
 
 var (

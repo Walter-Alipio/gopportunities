@@ -3,7 +3,7 @@ package config
 import (
 	"os"
 
-	"github.com/Walter-Alipio/gopportunities.git/schemas"
+	"github.com/Walter-Alipio/gopportunities/schemas"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
