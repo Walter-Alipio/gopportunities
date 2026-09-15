@@ -3,6 +3,7 @@ package handler
 import (
 	"fmt"
 	"net/http"
+	"strconv"
 
 	"github.com/Walter-Alipio/gopportunities/schemas"
 	"github.com/gin-gonic/gin"
@@ -40,8 +41,14 @@ func UpdateOpeningHandler(ctx *gin.Context) {
 		return
 	}
 
+	parsedId, err := strconv.Atoi(id)
+	if err != nil {
+		sendError(ctx, http.StatusBadRequest,
+			errParamIsRequired("id", "queryParameter").Error())
+	}
+
 	opening := schemas.Opening{}
-	if err := db.First(&opening, id).Error; err != nil {
+	if err := db.First(&opening, parsedId).Error; err != nil {
 		sendError(ctx, http.StatusNotFound,
 			fmt.Sprintf("opening with id: %s not found", id))
 		return
